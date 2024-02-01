@@ -36,12 +36,12 @@ function fonts() {
 
 function css() {
     return gulp.src('src/sass/style.scss')
-        .pipe(gulpIf(!isProd, sourcemaps.init()))
+        // .pipe(gulpIf(!isProd, sourcemaps.init()))
         .pipe(sass({
             includePaths: ['node_modules'],
             outputStyle: 'compressed'
         }).on('error', sass.logError))
-        .pipe(gulpIf(!isProd, sourcemaps.write()))
+        // .pipe(gulpIf(!isProd, sourcemaps.write()))
         .pipe(gulpIf(isProd, cssmin()))
         .pipe(gulp.dest('docs/css/'));
 }

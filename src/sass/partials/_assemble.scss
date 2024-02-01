@@ -1,0 +1,401 @@
+.gradient-wrapper {
+    padding: 0px;
+    position: relative;
+    margin: 5px;
+
+    @media screen and (max-width: 991px) {
+        position: static;
+        margin: 0;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 14px;
+        padding: 2px;
+        background: linear-gradient(45deg, rgba(174, 179, 205, 1), rgba(51, 56, 82, 1));
+        mask: linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+        -webkit-mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+
+        @media screen and (max-width: 991px) {
+            content: none;
+        }
+    }
+}
+
+.assemble {
+    position: relative;
+
+    &::before {
+        content: "";
+        background: url(../img/ellipse-shadolast.svg) no-repeat;
+        background-position: 50% 2%;
+        width: 100%;
+        display: block;
+        height: 800px;
+        position: absolute;
+        top: -300px;
+        overflow: hidden;
+        z-index: -1;
+    }
+
+    @media screen and (max-width: 991px) {
+        &:before {
+            background-position: 50% 40%;
+            height: 100vh;
+        }
+    }
+
+    &-heading {
+        max-width: 740px;
+        text-align: center;
+        margin: auto;
+    }
+}
+
+.building-blocks {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 16px;
+    overflow: hidden;
+
+    @media screen and (max-width: 991px) {
+        padding: 0;
+        border-radius: 10px;
+    }
+
+    &__puzzle {
+        background-color: #0B112A;
+        width: 25%;
+        padding: 50px 45px;
+        position: relative;
+
+        @media screen and (max-width: 991px) {
+            width: 100%;
+            padding: 15px 0px;
+        }
+
+        &>span {
+            font: 400 0.875rem/1.1875rem 'Satoshi', sans-serif;
+            color: rgba(239, 241, 255, 1);
+            display: block;
+
+            @media screen and (max-width: 991px) {
+                margin-left: 16px;
+            }
+        }
+
+        &:nth-child(1) {}
+
+        &:nth-child(2) {
+            background: url(../img/border-right.svg), url(../img/border-top.svg), #0B112A;
+            background-position: left bottom;
+            background-repeat: no-repeat;
+            background-size: 26px, 100%;
+
+            @media screen and (min-width: 1820px) {
+                background-position: left 56%, bottom;
+                background-repeat: no-repeat;
+                background-size: 28px, 100%;
+            }
+
+
+            @media screen and (max-width: 1199px) {
+                background-position: left, bottom;
+                background-size: 35px, 200%;
+            }
+
+        }
+
+        &:nth-child(3) {
+            background: url(../img/border-top.svg), #0B112A;
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-size: 315px;
+
+            @media screen and (min-width: 1820px) {
+                background-size: 385px;
+            }
+
+            @media screen and (max-width: 1199px) {
+                background-size: 455px;
+            }
+
+            &::after {
+                content: url(../img/border-5.svg);
+                position: absolute;
+                left: -26px;
+                top: 11px;
+                transform: scale(1.3);
+
+                @media screen and (min-width: 1820px) {
+                    left: -21px;
+                    top: 3px;
+                    transform: scale(1.3);
+                    left: -24px;
+                }
+
+                @media screen and (max-width: 1199px) {
+                    top: 37px;
+                    transform: scale(1.6);
+                }
+            }
+        }
+
+        &:nth-child(4) {
+            background: url(../img/border-right.svg), url(../img/border-top.svg), #0b112a;
+            background-position: left bottom;
+            background-repeat: no-repeat;
+            background-size: 26px, 100%;
+
+            @media screen and (min-width: 1820px) {
+                background-position: left 56%, bottom;
+                background-size: 28px, 100%;
+            }
+
+            @media screen and (max-width: 1199px) {
+                background-position: left, bottom;
+                background-size: 34px, 200%;
+            }
+        }
+
+        &:nth-child(5) {
+            background: url(../img/border-4.svg), #0B112A;
+            background-position: top;
+            background-repeat: no-repeat;
+            top: -2px;
+            position: relative;
+            background-size: 100%;
+            background-size: 385px;
+
+            @media screen and (max-width: 991px) {
+                top: 0;
+            }
+
+            @media screen and (min-width: 1820px) {
+                background-size: 385px;
+            }
+
+            &::after {
+                content: url(../img/border-5.svg);
+                position: absolute;
+                right: 2px;
+                top: 19px;
+                z-index: 9;
+                transform: scale(1.3);
+
+                @media screen and (min-width: 1820px) {
+                    transform: scale(1.3);
+                    right: 2px;
+                }
+
+                @media screen and (max-width: 1199px) {
+                    top: 37px;
+                    right: 5px;
+                    transform: scale(1.6);
+                }
+            }
+        }
+
+        &:nth-child(6) {}
+
+        &:nth-child(7) {
+
+            background: url(../img/border-right.svg), #0b112a;
+            background-position: left;
+            background-repeat: no-repeat;
+            background-size: 26px;
+
+            @media screen and (max-width: 1199px) {
+                background-size: 36px;
+            }
+
+            @media screen and (min-width: 1820px) {
+                background-size: 28px;
+            }
+
+            &::after {
+                content: url(../img/border-5.svg);
+                position: absolute;
+                right: 2px;
+                top: 10px;
+                z-index: 9;
+                transform: scale(1.3);
+
+                @media screen and (max-width: 1199px) {
+                    transform: scale(1.6);
+                    right: 5px;
+                    top: 36px;
+                }
+
+                @media screen and (min-width: 1820px) {
+                    transform: scale(1.3);
+                    right: 2px;
+                }
+            }
+        }
+
+        &:nth-child(8) {}
+
+        &:nth-child(9) {
+            background: url(../img/border-4.svg), #0b112a;
+            background-position: top;
+            background-repeat: no-repeat;
+            top: -2px;
+            position: relative;
+            background-size: 100%;
+            background-size: 385px;
+
+            @media screen and (min-width: 1820px) {
+                background-size: 385px;
+            }
+        }
+
+        &:nth-child(10) {
+            background: url(../img/border-4.svg), url(../img/border-right.svg), #0b112a;
+            background-position: top, left;
+            background-repeat: no-repeat;
+            top: -2px;
+            position: relative;
+            background-size: 385px, 26px;
+
+            @media screen and (max-width: 1199px) {
+                background-size: 385px, 36px;
+            }
+
+            @media screen and (min-width: 1820px) {
+                background-size: 385px, 28px;
+            }
+
+            &::after {
+                content: url(../img/border-5.svg);
+                position: absolute;
+                right: 2px;
+                top: 20px;
+                z-index: 9;
+                transform: scale(1.3);
+
+                @media screen and (max-width: 1199px) {
+                    transform: scale(1.6);
+                    right: 5px;
+                    top: 30px;
+                }
+
+                @media screen and (min-width: 1820px) {
+                    right: 2px;
+                    top: 5px;
+                    z-index: 9;
+                    transform: scale(1.3);
+                }
+            }
+        }
+
+        &:nth-child(11) {
+            background: url(../img/border-4.svg), #0b112a;
+            background-position: top, left;
+            background-repeat: no-repeat;
+            top: -2px;
+            position: relative;
+            background-size: 385px;
+
+            @media screen and (min-width: 1820px) {
+                background-size: 385px;
+            }
+        }
+
+        &:nth-child(12) {
+            background: url(../img/border-4.svg), url(../img/border-right.svg), #0b112a;
+            background-position: top, left;
+            background-repeat: no-repeat;
+            top: -2px;
+            position: relative;
+            background-size: 385px, 26px;
+
+            @media screen and (max-width: 1199px) {
+                background-size: 385px, 36px;
+            }
+
+            @media screen and (min-width: 1820px) {
+                background-size: 385px, 28px;
+            }
+        }
+
+        @media screen and (max-width: 991px) {
+            &:nth-child(even) {
+                background: none, #0b112a !important;
+                background-repeat: no-repeat !important;
+                background-position: bottom center !important;
+                background-size: contain !important;
+
+                &::after {
+                    content: "";
+                    display: block;
+                    background-image: url(../img/puzzele-mobile-2.svg);
+                    height: 28px;
+                    background-repeat: no-repeat;
+                    background-size: 450px;
+                    top: 15px;
+                    position: relative;
+                    transform: none !important;
+                    background-position: center;
+
+                }
+            }
+
+            &:nth-child(odd) {
+                background: none, #0b112a !important;
+                background-repeat: no-repeat !important;
+                background-position: bottom center !important;
+                background-size: contain !important;
+
+                &::after {
+                    content: "";
+                    display: block;
+                    background-image: url(../img/puzzele-mobile-1.svg);
+                    height: 28px;
+                    background-repeat: no-repeat;
+                    background-size: 450px;
+                    top: 15px;
+                    position: relative;
+                    transform: none !important;
+                    background-position: center;
+                    left: 0;
+
+                }
+            }
+
+            &:last-of-type {
+                &::after {
+                    content: none !important;
+                }
+            }
+        }
+    }
+
+    .puzzle-heading {
+        margin-bottom: 8px;
+        display: inline-flex;
+        width: 100%;
+
+        img,
+        svg {
+            margin-right: 8px;
+        }
+
+        span {
+            font: 500 1.125rem/1.75rem 'ClashGrotesk-Medium', sans-serif;
+            color: #fff;
+        }
+
+        @media screen and (max-width: 991px) {
+            margin-left: 16px;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.demo {
+    background: url(../../img/ellipse-shadow.svg) no-repeat;
+    background-position: 37% 25%;
+    background-size: 1005px;
+
+    @media screen and (max-width: 767px) {
+        background-position: 50% 53%;
+        background-size: 450px;
+    }
+
+    @media screen and (max-width: 576px) {
+        background-position: 50% 70%;
+    }
+
+    @media screen and (max-width: 400px) {
+        background-position: 50% 77%;
+        background-size: 360px;
+    }
+
+    &-actions {
+        display: flex;
+        gap: 8px;
+    }
+
+    h1 {
+        font: 400 4rem/4.4375rem "ClashGrotesk-Regular", sans-serif;
+        color: #fff;
+
+        @media screen and (max-width: 767px) {
+            font: 400 2rem/2rem "ClashGrotesk-Regular", sans-serif;
+            width: 100%;
+            text-align: center;
+        }
+
+        @media screen and (min-width: 1200px) {
+            max-width: 85%;
+        }
+    }
+
+    &-actions {
+        @media screen and (max-width: 576px) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

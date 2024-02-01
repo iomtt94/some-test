@@ -1,0 +1,139 @@
+.connect {
+    &-heading {
+        max-width: 500px;
+        margin: auto;
+    }
+
+    &-advantages {
+        position: relative;
+    }
+
+    &-advantage {
+        max-width: 300px;
+        position: absolute;
+        right: 22%;
+        top: 20%;
+
+        &::before {
+            content: url(../../img/link-to.svg);
+            background-repeat: no-repeat;
+            left: -100%;
+            position: absolute;
+            top: 50%;
+
+            @media screen and (max-width: 991px) {
+                left: -70%;
+                position: absolute;
+                top: 50%;
+                transform: scale(.5);
+            }
+        }
+
+        @media screen and (max-width: 1819px) {
+            right: 10%;
+        }
+
+        @media screen and (max-width: 1199px) {
+            right: 0%;
+        }
+
+        @media screen and (max-width: 767px) {
+            position: relative;
+            max-width: 290px;
+            margin-bottom: 2rem;
+
+            &::before {
+                content: none;
+            }
+
+            &::after {
+                right: 0;
+                position: absolute;
+                content: url("../../img/arrow-down-mobile.svg");
+                right: 2%;
+                top: 45%;
+            }
+        }
+
+        p {
+            font: 500 1.125rem/1.75rem "Satoshi", sans-serif;
+            color: rgba(255, 255, 255, 0.8);
+
+            @media screen and (max-width: 767px) {
+                color: #fff;
+                font: 500 1rem/1.75rem "Satoshi", sans-serif;
+                margin-bottom: 8px;
+            }
+        }
+
+        span {
+            font: 400 1.125rem/1.75rem "Satoshi", sans-serif;
+            color: rgba(255, 255, 255, 0.8);
+
+            @media screen and (max-width: 767px) {
+                color: #fff;
+                font: 400 1rem/1.75rem "Satoshi", sans-serif;
+            }
+        }
+
+        a {
+            display: inline-block;
+            position: relative;
+
+            &::before {
+                content: "";
+                width: 100%;
+                border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+                bottom: 0px;
+                position: absolute;
+            }
+
+            &:hover {
+                &:before {
+                    border: 1px dashed;
+                }
+            }
+        }
+
+        &.connect-advantage__second {
+            bottom: 34%;
+            right: 22%;
+            top: initial;
+
+            &::before {
+                content: url("../../img/link-to-2.svg") !important;
+                width: 100%;
+                bottom: 0px;
+                position: absolute;
+                top: -25%;
+                left: -112%;
+
+                @media screen and (max-width: 991px) {
+                    left: -81%;
+                }
+            }
+
+            @media screen and (max-width: 1819px) {
+                right: 10%;
+            }
+
+            @media screen and (max-width: 1199px) {
+                right: 0%;
+            }
+
+            @media screen and (max-width: 767px) {
+                &::before {
+                    content: none !important;
+                }
+
+                &::after {
+                    right: 0;
+                    position: absolute;
+                    content: url("../../img/arrow-down-mobile.svg");
+                    right: 12%;
+                    top: 90%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,156 @@
+// bootstrap
+@import "node_modules/bootstrap/scss/_functions";
+@import "node_modules/bootstrap/scss/_variables";
+@import "node_modules/bootstrap/scss/bootstrap-grid";
+@import "node_modules/bootstrap/scss/_utilities";
+
+@import "./partials/fonts";
+@import "./partials/buttons";
+@import "./partials/demo";
+@import "./partials/connect";
+@import "./partials/assemble";
+
+html {
+    font-size: 16px;
+}
+
+html, body {
+    scrollbar-gutter: stable
+}
+
+.mt-7 {
+    margin-top: 4.375rem;
+}
+
+.mt-10 {
+    margin-top: 6.25rem;
+}
+
+.heading-md {
+    font: 400 1.125rem/1.51875rem "Satoshi", sans-serif;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    display: inline-block;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    @media screen and (max-width: 767px) {
+        margin-top: 1rem;
+    }
+}
+
+h2 {
+    font: 500 2.25rem/2.875rem "ClashGrotesk-Medium", sans-serif;
+    color: #fff;
+    text-align: center;
+    margin: auto;
+
+    @media screen and (max-width: 767px) {
+        font: 500 1.5rem/2rem "Manrope", sans-serif;
+    }
+}
+
+.pb-7 {
+    padding-bottom: 4.375rem;
+}
+
+html:not(.touch-screen) ::-webkit-scrollbar, html:not(.touch-screen)::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+html:not(.touch-screen) ::-webkit-scrollbar-thumb, html:not(.touch-screen)::-webkit-scrollbar-thumb {
+    background: #202bc5;
+}
+
+html:not(.touch-screen) ::-webkit-scrollbar-track, html:not(.touch-screen)::-webkit-scrollbar-track {
+    background: #e1e1e1;
+}
+
+body ::selection {
+    color: #fff;
+    background: #202bc5;
+}
+
+@media (min-width: 1820px) {
+    .container,
+    main .container.size-1 {
+        max-width: 1790px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1819px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    background-color: #080a1e;
+}
+
+button {
+    cursor: pointer;
+    background: 0 0;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: top;
+}
+
+body * {
+    
+}
+
+.container, .container-fluid, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm {
+    padding-right: calc(var(--bs-gutter-x)*.8);
+    padding-left: calc(var(--bs-gutter-x)*.8);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    -webkit-locale: auto;
+}
+
+main {
+    margin-bottom: auto;
+    .container {
+        @media (min-width: 1820px) {
+            max-width: 1600px;
+        }
+    }
+}
+
+a:active, a:hover, a:link, a:visited {
+    text-decoration: none;
+    outline: 0;
+}
+
+
+ol, ul {
+    list-style: none;
+    margin-bottom: 0;
+}
+
+a:active, a:hover, a:link, a:visited {
+    text-decoration: none;
+    outline: 0;
+}
+
+a {
+    color: inherit;
+}
+
+.text-center {
+    text-align: center;
+}

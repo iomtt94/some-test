@@ -1,0 +1,55 @@
+// breakpoints @include
+$xxsBreakpoint: 320px;
+$xsBreakpoint: 577px;
+$smBreakpoint: 768px;
+$mdBreakpoint: 992px;
+$lgBreakpoint: 1200px;
+$xlBreakpoint: 1400px;
+
+@mixin xxs-breakpoint {
+    @media only screen and (min-width: $xxsBreakpoint) {
+        @content
+    }
+}
+
+@mixin xs-breakpoint {
+    @media only screen and (min-width: $xsBreakpoint) {
+        @content
+    }
+}
+
+@mixin sm-breakpoint {
+    @media only screen and (min-width: $smBreakpoint) {
+        @content
+    }
+}
+
+@mixin md-breakpoint {
+    @media only screen and (min-width: $mdBreakpoint) {
+        @content
+    }
+}
+
+@mixin lg-breakpoint {
+    @media only screen and (min-width: $lgBreakpoint) {
+        @content
+    }
+}
+
+@mixin xl-breakpoint {
+    @media only screen and (min-width: $xlBreakpoint) {
+        @content
+    }
+}
+
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal) {
+    @font-face {
+        font-family: $font-family;
+        font-weight: $weight;
+        font-style: $style;
+        src: url('#{$file-path}.eot');
+        src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+        url('#{$file-path}.woff') format('woff'),
+        url('#{$file-path}.ttf') format('truetype');
+    }
+}
